@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +10,18 @@
 <body>
     <header>
         <a href="#" class="logo">Driss El Bourkadi</a>
-
         <nav>
-            <a href="#home" class="active"> Home</a>
-            <a href="#services" >Services</a>
-            <a href="#skills" >Skills</a>
-            <a href="#education" >Education</a>
-            <a href="#exeperience" >Experience</a>
-            <a href="#contact" >Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="images/Driss.jpg" alt="Driss">
+            <img src="/images/Driss.jpg" alt="Driss El Bourkadi's Profile Picture">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Driss</span></h1>
@@ -35,24 +33,23 @@
                 <a href="https://x.com/Daryl1099067" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
             </div>
-                <a href="#" class="btn" id="btn" onclick="HireMe()">Hire me</a>
-            </div>
+            <a href="#" class="btn" id="btn" onclick="HireMe()">Hire me</a>
+        </div>
     </section>
 
     <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
 
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault(); 
-                const targetId = this.getAttribute('href'); 
-                const targetSection = document.querySelector(targetId); 
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+            if (scrollPosition > 100) { // Adjust the scroll threshold as needed
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
         });
+
         function HireMe() {
-            
             alert("Thank you for considering me! Let's work together.");
         }
     </script>
