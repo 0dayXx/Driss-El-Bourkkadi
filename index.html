@@ -21,7 +21,7 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="/images/Driss.jpg" alt="Driss El Bourkadi's Profile Picture">
+            <img src="images/Driss.jpg" alt="Driss El Bourkadi's Profile Picture">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Driss</span></h1>
@@ -36,22 +36,5 @@
             <a href="#" class="btn" id="btn" onclick="HireMe()">Hire me</a>
         </div>
     </section>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            const scrollPosition = window.scrollY;
-
-            if (scrollPosition > 100) { // Adjust the scroll threshold as needed
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-        });
-
-        function HireMe() {
-            alert("Thank you for considering me! Let's work together.");
-        }
-    </script>
 </body>
 </html>
